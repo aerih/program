@@ -1,0 +1,2 @@
+C:\C++_program\day6_通讯管理系统\day6_communication\Debug\day6_communication.exe
+C:\C++_program\day6_通讯管理系统\day6_communication\Debug\day6_communication.pdb

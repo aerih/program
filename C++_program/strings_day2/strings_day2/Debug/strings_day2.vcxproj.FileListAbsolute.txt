@@ -1,0 +1,2 @@
+C:\C++_program\strings_day2\strings_day2\Debug\strings_day2.exe
+C:\C++_program\strings_day2\strings_day2\Debug\strings_day2.pdb

@@ -1,0 +1,2 @@
+C:\C++_program\DongTaiNeiCun_day_4\Debug\DongTaiNeiCun_day_4.exe
+C:\C++_program\DongTaiNeiCun_day_4\Debug\DongTaiNeiCun_day_4.pdb

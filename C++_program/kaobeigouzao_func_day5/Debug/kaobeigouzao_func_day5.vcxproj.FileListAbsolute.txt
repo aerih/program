@@ -1,0 +1,2 @@
+C:\C++_program\kaobeigouzao_func_day5\Debug\kaobeigouzao_func_day5.exe
+C:\C++_program\kaobeigouzao_func_day5\Debug\kaobeigouzao_func_day5.pdb

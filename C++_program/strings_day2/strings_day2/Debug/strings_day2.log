@@ -1,0 +1,10 @@
+﻿  main.cpp
+C:\C++_program\strings_day2\strings_day2\main.cpp(18,2): error C2672: “getline”: 未找到匹配的重载函数
+C:\C++_program\strings_day2\strings_day2\main.cpp(18,14): error C2780: “std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)”: 应输入 2 个参数，却提供了 1 个
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\string(82): message : 参见“std::getline”的声明
+C:\C++_program\strings_day2\strings_day2\main.cpp(18,14): error C2780: “std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)”: 应输入 3 个参数，却提供了 1 个
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\string(76): message : 参见“std::getline”的声明
+C:\C++_program\strings_day2\strings_day2\main.cpp(18,14): error C2780: “std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)”: 应输入 2 个参数，却提供了 1 个
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\string(70): message : 参见“std::getline”的声明
+C:\C++_program\strings_day2\strings_day2\main.cpp(18,14): error C2780: “std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)”: 应输入 3 个参数，却提供了 1 个
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\string(27): message : 参见“std::getline”的声明

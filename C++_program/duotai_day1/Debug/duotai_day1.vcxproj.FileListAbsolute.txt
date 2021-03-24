@@ -1,0 +1,2 @@
+C:\C++_program\duotai_day1\Debug\duotai_day1.exe
+C:\C++_program\duotai_day1\Debug\duotai_day1.pdb
