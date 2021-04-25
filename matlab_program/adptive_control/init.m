@@ -1,7 +1,10 @@
-t1 = [0:0.01:10]';          %仿真时间是可调的
-gama1 = ones(1001,1)*55;
-gama2 = ones(1001,1)*10;
-simin = [t1,gama1,gama2];
-iend = 1;               %记录收敛时间数组的索引值
-data_Arr = zeros(1,150);    %新建一个数组用于存放各个伽马值开始收敛的时间
+gama1 = 80;
+gama2 = 180;
+bd = 150;
+kd = 200;
+
 pr = 50;
+% [simOut,f] = sim('simlink13.slx',[0,5]);
+% 
+% plot(fm.time,fm.data);
+% axis([3,4,0,80]);
