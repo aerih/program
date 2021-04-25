@@ -1,0 +1,1 @@
+﻿C:\Users\Administrator\git_program\C++_program\KinctStart\KinectBasic\KinectBasic.vcxproj(63,5): error MSB4019: 找不到导入的项目“C:\Users\Administrator\git_program\C++_program\KinctStart\KinectBasic\KinectSDK.props”。请确认 Import 声明“KinectSDK.props”中的表达式正确，且文件位于磁盘上。
