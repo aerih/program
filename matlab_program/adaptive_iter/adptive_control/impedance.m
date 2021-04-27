@@ -1,12 +1,12 @@
 %S-function for continuous state equation
-function [sys,x0,str,ts]=impedance0_ctrl(t,x,u,flag)
+function [sys,x0,str,ts]=int(t,x,u,flag,bd,kd)
 
 switch flag,
 %Initialization
   case 0,
     [sys,x0,str,ts]=mdlInitializeSizes;
 case 1,
-    sys=mdlDerivatives(t,x,u);
+    sys=mdlDerivatives(t,x,u,bd,kd);
 %Outputs
   case 3,
     sys=mdlOutputs(t,x,u);
@@ -24,7 +24,7 @@ sizes = simsizes;
 sizes.NumContStates  = 2;       %四个连续变量
 sizes.NumDiscStates  = 0;       
 sizes.NumOutputs     = 1;
-sizes.NumInputs      = 1;
+sizes.NumInputs      = 2;
 sizes.DirFeedthrough = 0;
 sizes.NumSampleTimes = 1;
 sys=simsizes(sizes);
@@ -32,11 +32,10 @@ x0=[0 0];           %四个变量
 str=[];
 ts=[0 0];
 
-function sys=mdlDerivatives(t,x,u)
-md = 50;bd = 1500;kd = 500;
-A = [0,1;-kd/md,-bd/md];
-B = [0;1/md];
-sys=A*x+B*u(1);
+function sys=mdlDerivatives(t,x,u,bd,kd)
+A = [0,1;-kd,-bd];
+B = [0,0;kd,-1];
+sys=A*x+B*u;
 
 function sys=mdlOutputs(t,x,u)
 sys(1)=x(1);

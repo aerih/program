@@ -10,7 +10,7 @@ switch flag,
   case 3,
     sys=mdlOutputs(t,x,u);
 %Unhandled flags
-  case {1,2, 4, 9 }
+  case {1, 4, 9 }
     sys = [];
 %Unexpected flags
   otherwise
@@ -36,8 +36,8 @@ function sys=mdlUpdate(t,x,u)
 sys=u(1);
 
 function sys=mdlOutputs(t,x,u)
-beita_b = 0.001;
-beita_k = 0.0005;
+beita_b = 0.01;
+beita_k = 0.005;
 to=0.01;
 de=(u(1)-x(1))/to;
 e = u(1);fe=u(2);fe_=u(3);bd=u(4);kd=u(5);

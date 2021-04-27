@@ -1,0 +1,38 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.40380174868003066 0.8921012413020034 0.2027301729648897 0.9943063363907565
+  position 2.0549232350526236 2.032664312433145 2.0441346164891705
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+Solid {
+  translation 0.5 0.5 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.1 0.5 0.3
+        baseColorMap ImageTexture {
+        }
+      }
+      geometry Sphere {
+        radius 0.1
+      }
+    }
+  ]
+  name "1"
+  boundingObject Sphere {
+    radius 0.1
+  }
+  physics Physics {
+  }
+}
+E-puck {
+}

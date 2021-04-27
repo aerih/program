@@ -2,7 +2,7 @@
 clear all;
 close all;
 
-t=[0:0.01:3]';
+t=[0:0.01:15]';
 k(1:length(t))=0;    %Total initial points
 k=k';
 T1(1:length(t))=0;
@@ -11,13 +11,14 @@ T2=T1;
 fe_(1:length(t))=0;
 fe_=fe_';
 T=[T1 T2];
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% sim('test',[0,15]);
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % M=20;
 % for i=1:1:M    % Start Learning Control
 % i
 % pause(0.01);
 % 
-% sim('iter_impedance',[0,3]);
+% sim('iter_impedance',[0,15]);
 % 
 % 
 % figure(1);
@@ -38,8 +39,8 @@ T=[T1 T2];
 % 
 % T(:,1)=T(length(t),1);
 % T(:,2)=T(length(t),2);
-% %fe_(:)=fe_(length(t)-1);
-% 
+%fe_(:)=fe_(length(t)-1);
+% end
 % % j=i+1;
 % % times(j)=i;
 % % e1i(j)=max(abs(e1));

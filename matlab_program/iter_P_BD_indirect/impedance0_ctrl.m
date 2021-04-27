@@ -24,7 +24,7 @@ sizes = simsizes;
 sizes.NumContStates  = 2;       %四个连续变量
 sizes.NumDiscStates  = 0;       
 sizes.NumOutputs     = 1;
-sizes.NumInputs      = 1;
+sizes.NumInputs      = 3;
 sizes.DirFeedthrough = 0;
 sizes.NumSampleTimes = 1;
 sys=simsizes(sizes);
@@ -33,7 +33,7 @@ str=[];
 ts=[0 0];
 
 function sys=mdlDerivatives(t,x,u)
-md = 50;bd = 1500;kd = 500;
+md = 1;bd = u(2);kd = u(3);
 A = [0,1;-kd/md,-bd/md];
 B = [0;1/md];
 sys=A*x+B*u(1);

@@ -1,0 +1,29 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.9996566518304354 0.026130064235244364 0.001948895642575106 5.50853689258574
+  position 0.08675357987224197 6.48421799771845 5.719099604721984
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+CircleArena {
+  radius 3
+}
+Solid {
+  translation 0 1 0
+  scale 2 2 2
+  children [
+    Shape {
+      geometry Sphere {
+        radius 0.1
+      }
+    }
+  ]
+  name "qiu"
+  physics Physics {
+  }
+}
