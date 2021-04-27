@@ -1,0 +1,2 @@
+C:\Users\Administrator\git_program\C++_program\day_7面向对象的复习\文件读取练习\Debug\文件读取练习.exe
+C:\Users\Administrator\git_program\C++_program\day_7面向对象的复习\文件读取练习\Debug\文件读取练习.pdb
