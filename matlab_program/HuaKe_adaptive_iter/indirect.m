@@ -1,12 +1,12 @@
 %S-function for continuous state equation
- function [sys,x0,str,ts]=indirect(t,x,u,flag)
+ function [sys,x0,str,ts]=int(t,x,u,flag,gama1,gama2)
 
 switch flag,
 %Initialization
   case 0,
     [sys,x0,str,ts]=mdlInitializeSizes;
 case 1,
-    sys=mdlDerivatives(t,x,u);
+    sys=mdlDerivatives(t,x,u,gama1,gama2);
 %Outputs
   case 3,
     sys=mdlOutputs(t,x,u);
@@ -23,26 +23,25 @@ function [sys,x0,str,ts]=mdlInitializeSizes
 sizes = simsizes;
 sizes.NumContStates  = 2;      
 sizes.NumDiscStates  = 0;       
-sizes.NumOutputs     = 1;
+sizes.NumOutputs     = 2;
 sizes.NumInputs      = 3;
 sizes.DirFeedthrough = 1;
 sizes.NumSampleTimes = 1;
 sys=simsizes(sizes);
-x0=[5000 0];          
+x0=[4000 0];          
 str=[];
 ts=[0 0];
 
 %输入是fm & xm, 输出是ke & xe.
-function sys=mdlDerivatives(t,x,u)
+function sys=mdlDerivatives(t,x,u,gama1,gama2)
 fm = u(1);
 xm = u(2);
 ke_ = x(1);
 xe_ = x(2);
-gama1=1;gama2=15;gama3=1;
 
 f_=ke_*(xm-xe_);
-sys(1)=-(gama1*xm+gama2)*(f_-fm);
-sys(2)=((f_-fm)/ke_)*((gama1*xe_+gama2)*xm+gama2*xe_+gama3);
+sys(1)=-gama1*xm*(f_-fm);
+sys(2)=(gama1*xm*xe_+gama2)*(f_-fm)/ke_;
 
 
 function sys=mdlOutputs(t,x,u)
@@ -52,5 +51,5 @@ fr = u(3);
 
 xr = xe_+fr/ke_;
 sys(1)=xr;
-    
+sys(2)=ke_;    
 

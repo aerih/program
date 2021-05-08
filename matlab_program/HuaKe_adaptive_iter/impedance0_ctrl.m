@@ -1,12 +1,12 @@
 %S-function for continuous state equation
-function [sys,x0,str,ts]=impedance0_ctrl(t,x,u,flag)
+function [sys,x0,str,ts]=impedance0_ctrl(t,x,u,flag,bd,kd)
 
 switch flag,
 %Initialization
   case 0,
     [sys,x0,str,ts]=mdlInitializeSizes;
 case 1,
-    sys=mdlDerivatives(t,x,u);
+    sys=mdlDerivatives(t,x,u,bd,kd);
 %Outputs
   case 3,
     sys=mdlOutputs(t,x,u);
@@ -32,8 +32,8 @@ x0=[0 0];           %四个变量
 str=[];
 ts=[0 0];
 
-function sys=mdlDerivatives(t,x,u)
-md = 50;bd = 1500;kd = 500;
+function sys=mdlDerivatives(t,x,u,bd,kd)
+md = 1;
 A = [0,1;-kd/md,-bd/md];
 B = [0;1/md];
 sys=A*x+B*u(1);
