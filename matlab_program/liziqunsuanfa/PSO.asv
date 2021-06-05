@@ -1,5 +1,4 @@
-
-function [Pg,fmin]=PSO1(f,dimension,n,m,xmax,xmin,vmax,vmin)
+function [Pg,fmin]=PSO(f,dimension,n,m,xmax,xmin,vmax,vmin)
 %全局粒子群算法,f为目标函数,dimension为维度,n为代数,m为种群规模
 %位置限幅为[xmin,xmax]，速度限幅为[vmin,vmax]
     Savef=zeros(n+1,1);
@@ -29,14 +28,14 @@ function [Pg,fmin]=PSO1(f,dimension,n,m,xmax,xmin,vmax,vmin)
         last_f=new_f;%保存当前的函数值
         fmin=min(new_fmin,fmin);%更新函数最小值
          Savef(i)=fmin;
-         if mod(i,floor(n/10))==0  %每10代记录一次种群参数，mod取余数，floor向下取整
-%          if mod(i,10)==0 
+         %if mod(i,floor(n/10))==0  %每10代记录一次种群参数，mod取余数，floor向下取整
+         if mod(i,10)==0 
              N=N+1;
             SaveData(:,:,N)=X;
          end
          w=w-i/n*0.7*w;
     end
-    for j=1:floor(n/10)+1
+    for j=1:floor(n/10)
         figure(j)
         plot(SaveData(:,1,j),SaveData(:,2,j),'o');
         xlim([-xmax,xmax])
